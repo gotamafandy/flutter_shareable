@@ -1,0 +1,23 @@
+<header class="material-header">
+    <div class="material-header-row">
+        <div [ngSwitch]="loading">
+            <span *ngSwitchCase="true" class="material-header-title">Movie List - Loading</span>
+            <span *ngSwitchCase="false" class="material-header-title">Movie List</span>
+        </div>
+        <div class="material-spacer"></div>
+    </div>
+</header>
+<material-content>
+<div class="container">
+    <div *ngFor="let movie of movies" style="margin: 20px;">
+        <section>
+            <div class="mdc-card movie-size">
+                <img src="{{ movie.poster }}" class="mdc-card__media mdc-card__media--16-9" />
+                <div class="demo-card__primary">
+                    <h2 class="demo-card__title" style="margin: 20px;">{{ movie.title }}</h2>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+</material-content>

@@ -1,0 +1,9 @@
+.movie-size {
+    width: 300px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
